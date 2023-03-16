@@ -51,3 +51,6 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 ./main -m ./models/7B/ggml-model-q4_0.bin -t 8 -n 128 --instruction <instruction> --input <input_to_instruction>
 ```
 
+## How this differs from original LLaMa.cpp:
+- `convert-pth-to-ggml.py` has been updated to download and handle LoRA weights.
+- `utils.h` and `utils.cpp` have been modified to support input prompts in the style of Alpaca.
