@@ -1,6 +1,6 @@
 # InstructLLaMa.cpp
 
-Inference of [InstructLLaMA](https://arxiv.org/abs/2302.13971) model.
+Inference of [LLaMA](https://arxiv.org/abs/2302.13971) model with [Instruct finetuning](https://crfm.stanford.edu/2023/03/13/alpaca.html) with LoRA fine-tunable adapter layers.
 
 **Dev-notes:** We are switching away from [our C++ implementation of LLaMa](https://github.com/NolanoOrg/llama-int4-quant) to the more recent one [llama.cpp](https://github.com/ggerganov/llama.cpp) by [@ggerganov](https://github.com/ggerganov) that now offers nearly same performance (and output quality) on Macbook as well as support over Linux and Windows.
 
