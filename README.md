@@ -10,7 +10,7 @@ License: MIT
 
 If you use LLaMa weights, then it should only be used for non-commercial research purposes.
 
-## Description
+## Description & Usage
 
 Here is a typical run using the adapter weights uploaded by `tloen/alpaca-lora-7b` under MIT license:
 
@@ -24,7 +24,7 @@ make -j && ./main -m ./models/7B/ggml-model-q4_0.bin --instruction "Calculate th
 
 These follow the Stanford's Alpaca format for instruction prompt (https://github.com/tatsu-lab/stanford_alpaca#data-release)
 
-## Usage
+## Setup
 
 Here are the step for the LLaMA-7B model (same as llama.cpp), defaults to the adapter weights uploaded by `tloen/alpaca-lora-7b` under MIT license:
 
