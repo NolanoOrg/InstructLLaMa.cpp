@@ -2,11 +2,12 @@
 
 Inference of [InstructLLaMA](https://arxiv.org/abs/2302.13971) model.
 
-**Dev-notes:** We are switching away from our C++ implementation of LLaMa to the newer [llama.cpp](https://github.com/ggerganov/llama.cpp) implementation by [@ggerganov](https://github.com/ggerganov). llama.cpp offers nearly similar performance on Macbook and output quality as our C++ implementation, but it also supports Linux and Windows.
+**Dev-notes:** We are switching away from [our C++ implementation of LLaMa](https://github.com/NolanoOrg/llama-int4-quant) to the more recent one [llama.cpp](https://github.com/ggerganov/llama.cpp) by [@ggerganov](https://github.com/ggerganov) that now offers nearly same performance (and output quality) on Macbook as well as support over Linux and Windows.
 
 Supported platforms: Mac OS, Linux, Windows (via CMake)
 
 License: MIT
+
 If you use LLaMa weights, then it should only be used for non-commercial research purposes.
 
 ## Description
@@ -18,9 +19,10 @@ make -j && ./main -m ./models/7B/ggml-model-q4_0.bin --instruction "Write an ema
 ```
 
 ```java
-make -j && ./main -m ./models/7B/ggml-model-q4_0.bin --instruction "Write an email to your friend about your plans for the weekend." -t 8 -n 128
+make -j && ./main -m ./models/7B/ggml-model-q4_0.bin --instruction "Calculate the area of the a circle given its radius." --input "radius = 3" -t 8 -n 128
 ```
 
+These follow the Stanford's Alpaca format for instruction prompt (https://github.com/tatsu-lab/stanford_alpaca#data-release)
 
 ## Usage
 
